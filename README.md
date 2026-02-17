@@ -42,7 +42,7 @@ your_user/Distance bounding demo/SKI>
 
 ---
 
-You need __2__ consoles.
+You need __2__ consoles, in the same context as shown above.
 
 Verifier Console:
 
@@ -61,7 +61,7 @@ python prover.py
 
 ---
 
-You need __2__ consoles.
+You need __2__ consoles, in the same context as shown above.
 
 Verifier Console:
 
@@ -80,7 +80,7 @@ python prover.py --delay-ms 200
 
 ---
 
-You need __2__ consoles.
+You need __2__ consoles, in the same context as shown above.
 
 Verifier Console:
 
@@ -99,7 +99,7 @@ python attacks.py df
 
 ---
 
-You need __3__ consoles.
+You need __3__ consoles, in the same context as shown above.
 
 In this demo, there is a man in the middle, a third party. Since, all parties need to communicate, this party will expose a new port for the Prover to connect. Depending on the protocol, the `mitm-port` value is:
 
@@ -129,7 +129,7 @@ python prover.py --port mitm-port
 
 ---
 
-You need __2__ consoles.
+You need __2__ consoles, in the same context as shown above.
 
 Verifier Console:
 

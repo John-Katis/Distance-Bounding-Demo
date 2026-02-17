@@ -38,9 +38,6 @@ And for SKI protocol, your context should be:
 your_user/Distance bounding demo/SKI>
 ```
 
-For each experiment, the commands are (DBP=distance bounding protocol, HK or SKI):
-
-
 ### Honest prover, within acceptable distance
 
 ---
@@ -50,14 +47,14 @@ You need __2__ consoles.
 Verifier Console:
 
 ```console
-your_user/Distance bounding demo/DBP> python setup.py
-your_user/Distance bounding demo/DBP> python verifier.py
+python setup.py
+python verifier.py
 ```
 
 Prover Console:
 
 ```console
-your_user/Distance bounding demo/DBP> python prover.py
+python prover.py
 ```
 
 ### Honest prover, outside acceptable distance
@@ -69,14 +66,14 @@ You need __2__ consoles.
 Verifier Console:
 
 ```console
-your_user/Distance bounding demo/DBP> python setup.py
-your_user/Distance bounding demo/DBP> python verifier.py
+python setup.py
+python verifier.py
 ```
 
 Prover Console - we need to simulate distance, so we add a delay. The acceptance threshold for delays is 0.1 seconds, so any delay >= threshold should simulate the "long distance":
 
 ```console
-your_user/Distance bounding demo/DBP> python prover.py --delay-ms 200
+python prover.py --delay-ms 200
 ```
 
 ### Distance Fraud attack
@@ -88,14 +85,14 @@ You need __2__ consoles.
 Verifier Console:
 
 ```console
-your_user/Distance bounding demo/DBP> python setup.py
-your_user/Distance bounding demo/DBP> python verifier.py
+python setup.py
+python verifier.py
 ```
 
 Prover Console:
 
 ```console
-your_user/Distance bounding demo/DBP> python attacks.py df
+python attacks.py df
 ```
 
 ### Mafia Fraud attack
@@ -112,20 +109,20 @@ In this demo, there is a man in the middle, a third party. Since, all parties ne
 Verifier Console:
 
 ```console
-your_user/Distance bounding demo/DBP> python setup.py
-your_user/Distance bounding demo/DBP> python verifier.py
+python setup.py
+python verifier.py
 ```
 
 Man-in-the-Middle Console:
 
 ```console
-your_user/Distance bounding demo/DBP> python attacks.py mf --mf-listen mitm-port
+python attacks.py mf --mf-listen mitm-port
 ```
 
 Prover Console:
 
 ```console
-your_user/Distance bounding demo/DBP> python prover.py --port mitm-port
+python prover.py --port mitm-port
 ```
  
 ### Terrorist Fraud attack
@@ -137,14 +134,14 @@ You need __2__ consoles.
 Verifier Console:
 
 ```console
-your_user/Distance bounding demo/DBP> python setup.py
-your_user/Distance bounding demo/DBP> python verifier.py
+python setup.py
+python verifier.py
 ```
 
 Prover Console:
 
 ```console
-your_user/Distance bounding demo/DBP> python attacks.py tf
+python attacks.py tf
 ```
 
 ## Attacks

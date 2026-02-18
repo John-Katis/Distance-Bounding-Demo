@@ -10,12 +10,12 @@
 
 This demonstation is following the lecture [slides](https://learning.unisg.ch/courses/26413/files/3925259?wrap=1) from Secure & Private Computation: Foundations of Ethical Hacking. There are 2 distance bounding protocols in this repository, one developed by Hancke and Kuhn - [HK, SECURECOMM](https://www.cl.cam.ac.uk/~mgk25/sc2005-distance.pdf) and another developed by S. Vaudenay, K. Mitrokotsa and I. Boureanu - [SKI, IACR](https://eprint.iacr.org/2015/208.pdf).
 
-There are in total 10 different demonstations, 5 for each protocol, including:
+There are in total 12 different demonstations, 6 for each protocol, including:
 
 1. [Honest Prover, within acceptable distance](#honest-prover-within-acceptable-distance)
 2. [Honest Prover, outside acceptable distance](#honest-prover-outside-acceptable-distance)
 3. [Distance Fraud attack](#distance-fraud-attack)
-4. [Mafia Fraud attack](#mafia-fraud-attack)
+4. [Mafia Fraud attack](#mafia-fraud-attack) (x2)
 5. [Terrorist Fraud attack](#terrorist-fraud-attack)
 
 More explanations on the attacks are given later in the README. Below is the way to run each of the demonstations.

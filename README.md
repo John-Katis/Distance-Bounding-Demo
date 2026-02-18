@@ -99,12 +99,24 @@ python attacks.py df
 
 ---
 
-You need __3__ consoles.
+There are 2 flavors of mafia fraud. For both, you need __3__ consoles.
 
 In this demo, there is a man in the middle, a third party. Since, all parties need to communicate, this party will expose a new port for the Prover to connect. Depending on the protocol, the `mitm-port` value is:
 
 - _HK_: `mitm-port=5003`
 - _SKI_: `mitm-port=6003`
+
+The final tunnel looks like:
+
+Verifier <-> Attacker <-> Prover
+
+We make 2 scenarios, 1 where this whole tunnel is within the acceptable distance and 1 where only the attacker is within the acceptable distance.
+
+#### 1. Prover, Attacker in range
+
+---
+
+The attacker works as a relay. Because of this, __this attack always works!__
 
 Verifier Console:
 
@@ -116,7 +128,32 @@ python verifier.py
 Man-in-the-Middle Console:
 
 ```console
-python attacks.py mf --mf-listen mitm-port
+python attacks.py mf_in --mf-listen mitm-port
+```
+
+Prover Console:
+
+```console
+python prover.py --port mitm-port
+```
+
+#### 2. Only Attacker in range
+
+---
+
+Attacker makes random guesses, __equivalent to distance fraud.__
+
+Verifier Console:
+
+```console
+python setup.py
+python verifier.py
+```
+
+Man-in-the-Middle Console:
+
+```console
+python attacks.py mf_out --mf-listen mitm-port
 ```
 
 Prover Console:

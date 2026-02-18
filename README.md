@@ -188,7 +188,11 @@ With the exeption of not using secure randomness generators, the code follows th
 For both protocols, implementations for the setup, prover and verifier are given. The `json_utils` file always provides the means of communication between distributed parties and the `attacks` folder models the following 3 attacks:
 
 1. Distance Fraud - malicious actor tries to guess the replies to the challenges. Success rate depends on threshold for wrong replies.
-2. Mafia Fraud - man in the middle tries to guess the replies to the challenges. Success rate depends on threshold for wrong replies.
+2. Mafia Fraud - there are 2 versions, both with a man in the middle (attacker):
+    
+    2.1 Attacker and Prover are both in range: in this case, the attacker works as a relay, forwarding challenges to the prover and responses to the verifier. __This always works__
+    
+    2.2 Prover out of range: In this case, the attacker receives the challenges and replies with random guesses. This is equivalent to __Distance Fraud__. 
 3. Terrorist Fraud - man in the middle and malicious actor collude, the man in the middle lears the setup randomness and is able to attack the HK protocol with 100% success rate.
 
 _In this repository, the threshold for wrong replies is 0, meaning no wrong replies to challenges are tolerated by the verifier._
